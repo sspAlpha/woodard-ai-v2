@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700"], // Specify weights for Roboto
+  weight: ["300", "400", "500", "700"], 
 });
 
 export const metadata: Metadata = {
@@ -28,9 +30,11 @@ export default function RootLayout({
       </head>
       <body
         className={`${roboto.variable} antialiased`}
-        style={{ fontFamily: "'EB Garamond', serif" }}
+        style={{ fontFamily: "'Roboto', sans-serif" }}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

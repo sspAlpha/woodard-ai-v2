@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
-      './pages/**/*.{js,ts,jsx,tsx}', 
-      './components/**/*.{js,ts,jsx,tsx}', 
-      './app/**/*.{js,ts,jsx,tsx}',
+    "./src/app/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
       extend: {
@@ -30,7 +30,6 @@ export default {
     },
     plugins: [
       require('@tailwindcss/typography'), 
-      require('daisyui'), 
       function ({ addBase }) {
         addBase({
           html: {
@@ -122,11 +121,4 @@ export default {
         });
       },
     ],
-    daisyui: {
-      base: false, // Disable base styles
-      styled: true, // Enable styled components
-      utils: false, // Disable utility classes
-      logs: true, // Show DaisyUI logs in the console
-      themes: false, // Disable themes
-    },
 };
