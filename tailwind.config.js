@@ -32,9 +32,6 @@ export default {
       require('@tailwindcss/typography'), 
       function ({ addBase }) {
         addBase({
-          html: {
-            fontSize: '62.5%', // Set base font size to 62.5% (1rem = 10px)
-          },
           h1: {
             fontFamily: '"EB Garamond", serif',
             fontWeight: '300', 
